@@ -14,8 +14,8 @@
    <string>Wifibot</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>../build-Wifibot-Desktop_Qt_5_4_0_MinGW_32bit-Debug/robot.png</normaloff>../build-Wifibot-Desktop_Qt_5_4_0_MinGW_32bit-Debug/robot.png</iconset>
+   <iconset resource="ressources.qrc">
+    <normaloff>:/robot.png</normaloff>:/robot.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget"/>
   <widget class="QMenuBar" name="menuBar">
@@ -51,6 +51,8 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="ressources.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -14,10 +14,16 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    credits.cpp
+    credits.cpp \
+    connection.cpp
 
 HEADERS  += mainwindow.h \
-    credits.h
+    credits.h \
+    connection.h
 
 FORMS    += mainwindow.ui \
-    credits.ui
+    credits.ui \
+    connection.ui
+
+RESOURCES += \
+    ressources.qrc

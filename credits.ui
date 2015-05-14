@@ -11,9 +11,13 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>A propos</string>
   </property>
-  <widget class="QWidget" name="">
+  <property name="windowIcon">
+   <iconset resource="ressources.qrc">
+    <normaloff>:/robot.png</normaloff>:/robot.png</iconset>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -70,6 +74,8 @@
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="ressources.qrc"/>
+ </resources>
  <connections/>
 </ui>
