@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <connection.h>
+#include "credits.h"
 
 namespace Ui {
 class MainWindow;

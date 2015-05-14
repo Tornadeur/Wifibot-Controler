@@ -5,8 +5,12 @@ connection::connection(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::connection)
 {
+
     ui->setupUi(this);
+
 }
+
+
 
 connection::~connection()
 {
