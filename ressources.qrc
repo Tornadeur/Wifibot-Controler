@@ -1,5 +1,9 @@
 <RCC>
     <qresource prefix="/">
         <file>robot.png</file>
+        <file>Bas.png</file>
+        <file>Droite.png</file>
+        <file>Gauche.png</file>
+        <file>Haut.png</file>
     </qresource>
 </RCC>
