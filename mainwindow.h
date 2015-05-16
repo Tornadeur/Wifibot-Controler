@@ -22,6 +22,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    connection* fconnect;
 };
 
 #endif // MAINWINDOW_H
