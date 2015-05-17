@@ -3,7 +3,8 @@
 
 #include <QMainWindow>
 #include <connection.h>
-#include "credits.h"
+#include <credits.h>
+#include <interface.h>
 
 namespace Ui {
 class MainWindow;
@@ -23,6 +24,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     connection* fconnect;
+   public : interface* finterface;
 };
 
 #endif // MAINWINDOW_H

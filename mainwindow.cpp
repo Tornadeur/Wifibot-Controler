@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    fconnect = new connection();
+    fconnect = new connection(this);
     this->setCentralWidget(fconnect);
 
 
