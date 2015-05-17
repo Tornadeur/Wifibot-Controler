@@ -21,10 +21,10 @@ public:
 private slots:
     void on_actionA_propos_triggered();
 
-private:
+public :
     Ui::MainWindow *ui;
     connection* fconnect;
-   public : interface* finterface;
+ interface* finterface;
 };
 
 #endif // MAINWINDOW_H

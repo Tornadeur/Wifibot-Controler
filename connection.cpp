@@ -24,5 +24,6 @@ void connection::on_pushButton_clicked()
     MainWindow *principal = (MainWindow*)this->parent();
     principal->finterface= new interface(principal);
     principal->setCentralWidget(principal->finterface);
+    this->deleteLater();
 
 }

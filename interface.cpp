@@ -1,5 +1,6 @@
 #include "interface.h"
 #include "ui_interface.h"
+#include <mainwindow.h>
 
 interface::interface(QWidget *parent) :
     QWidget(parent),
@@ -11,4 +12,12 @@ interface::interface(QWidget *parent) :
 interface::~interface()
 {
     delete ui;
+}
+
+void interface::on_pushButton_clicked()
+{
+    MainWindow* principal = (MainWindow*)this->parent();
+    principal->fconnect= new connection(principal);
+    principal->setCentralWidget(principal->fconnect);
+    this->deleteLater();
 }
