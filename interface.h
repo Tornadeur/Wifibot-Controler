@@ -8,6 +8,14 @@
 #include <QMessageBox>
 #include <QDebug>
 #include <QKeyEvent>
+#include <QNetworkAccessManager>
+#include <QtNetwork>
+
+#define cameraup "/?action=command&dest=0&plugin=0&id=10094853&group=1&value=-200"
+#define cameradown "/?action=command&dest=0&plugin=0&id=10094853&group=1&value=200"
+#define cameraleft "/?action=command&dest=0&plugin=0&id=10094852&group=1&value=200"
+#define cameraright "/?action=command&dest=0&plugin=0&id=10094852&group=1&value=-200"
+#define camcenter "/?action=command&dest=0&plugin=0&id=10094852&group=1&value=1"
 
 namespace Ui {
 class interface;
@@ -26,6 +34,7 @@ public:
     bool left;
     bool right;
     bool connecte;
+    QNetworkAccessManager* camera;
     QByteArray buf;
     QString adresse;
     QString port;

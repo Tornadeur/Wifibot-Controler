@@ -16,6 +16,7 @@ interface::interface(QWidget *parent) :
     timer = new QTimer();
     timer->setInterval(100);
     connect(timer, SIGNAL(timeout()), this, SLOT(tick()));
+    camera = new QNetworkAccessManager;
 
 }
 
@@ -194,29 +195,51 @@ void interface::keyPressEvent(QKeyEvent *event){
         if(event->key() == Qt::Key_Z){
            this->foreward=true;
         }
-        else if(event->key() == Qt::Key_Q){
+        else if(event->key() == Qt::Key_Q ){
            this->left=true;
         }
-        else if(event->key() == Qt::Key_S){
+        else if(event->key() == Qt::Key_S ){
             this->backward=true;
         }
-        else if(event->key() == Qt::Key_D){
+        else if(event->key() == Qt::Key_D ){
              this->right=true;
         }
+        else if(event->key() == Qt::Key_8){
+            QUrl url("http://"+ this->adresse +":8080"+cameraup);
+            camera->get(QNetworkRequest(url));
+        }
+        else if(event->key() == Qt::Key_2){
+            QUrl url("http://" + this->adresse +":8080" + cameradown);
+                        camera->get(QNetworkRequest(url));
+        }
+        else if(event->key() == Qt::Key_4){
+            QUrl url("http://" + this->adresse +":8080" + cameraleft);
+                        camera->get(QNetworkRequest(url));
+        }
+        else if(event->key() == Qt::Key_6){
+            QUrl url("http://" + this->adresse +":8080" + cameraright);
+            camera->get(QNetworkRequest(url));
+        }
+        else if(event->key() == Qt::Key_5){
+            QUrl url("http://" + this->adresse +":8080" + camcenter);
+            camera->get(QNetworkRequest(url));
+            qDebug() << "Cam centré !";
+        }
+
 
 
 }
 void interface::keyReleaseEvent(QKeyEvent *event){
-        if(event->key() == Qt::Key_Z){
+        if(event->key() == Qt::Key_Z || Qt::Key_Up){
             this->foreward=false;
         }
         else if(event->key() == Qt::Key_Q){
             this->left=false;
         }
-        else if(event->key() == Qt::Key_S){
+        else if(event->key() == Qt::Key_S ){
            this->backward=false;
         }
-        else if(event->key() == Qt::Key_D){
+        else if(event->key() == Qt::Key_D ){
           this->right=false;
         }
 

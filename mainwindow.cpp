@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     fconnect = new connection(this);
     this->setCentralWidget(fconnect);
+    this->setFixedSize(420,360);
 
 
 }
