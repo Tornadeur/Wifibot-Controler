@@ -21,10 +21,16 @@ connection::~connection()
 
 void connection::on_pushButton_clicked() //CONNECTION
 {
-    QString address = ui->adresse->text();
+    QString adress = ui->adresse->text();
     quint16 port = quint16(ui->port->text().toInt());
     MainWindow *principal = (MainWindow*)this->parent();
     principal->finterface= new interface(principal);
+
+
+    if(principal->finterface->Connexion(adress,port)){
+    QMessageBox::information(this,"Connection","Connection réussi !");
+    principal->finterface->adresse=adress;
+    principal->finterface->adresse=port;}
     principal->setCentralWidget(principal->finterface);
     this->deleteLater();
 
