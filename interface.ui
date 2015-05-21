@@ -87,9 +87,6 @@
           <iconset resource="ressources.qrc">
            <normaloff>:/Gauche.png</normaloff>:/Gauche.png</iconset>
          </property>
-         <property name="shortcut">
-          <string>Left, Q</string>
-         </property>
         </widget>
        </item>
        <item row="1" column="1">
@@ -100,9 +97,6 @@
          <property name="icon">
           <iconset resource="ressources.qrc">
            <normaloff>:/Bas.png</normaloff>:/Bas.png</iconset>
-         </property>
-         <property name="shortcut">
-          <string>Down, S</string>
          </property>
         </widget>
        </item>
@@ -115,9 +109,6 @@
           <iconset resource="ressources.qrc">
            <normaloff>:/Haut.png</normaloff>:/Haut.png</iconset>
          </property>
-         <property name="shortcut">
-          <string>Up, Z</string>
-         </property>
         </widget>
        </item>
        <item row="1" column="2">
@@ -128,9 +119,6 @@
          <property name="icon">
           <iconset resource="ressources.qrc">
            <normaloff>:/Droite.png</normaloff>:/Droite.png</iconset>
-         </property>
-         <property name="shortcut">
-          <string>D, Right</string>
          </property>
         </widget>
        </item>
