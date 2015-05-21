@@ -74,7 +74,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLCDNumber" name="lcdNumber"/>
+      <widget class="QLCDNumber" name="batterylcd"/>
      </item>
      <item>
       <layout class="QGridLayout" name="gridLayout">
