@@ -19,8 +19,10 @@ connection::~connection()
     delete ui;
 }
 
-void connection::on_pushButton_clicked()
+void connection::on_pushButton_clicked() //CONNECTION
 {
+    QString address = ui->adresse->text();
+    quint16 port = quint16(ui->port->text().toInt());
     MainWindow *principal = (MainWindow*)this->parent();
     principal->finterface= new interface(principal);
     principal->setCentralWidget(principal->finterface);

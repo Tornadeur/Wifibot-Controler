@@ -15,7 +15,7 @@
   </property>
   <layout class="QGridLayout" name="gridLayout_4">
    <item row="0" column="0">
-    <widget class="QWebView" name="webView">
+    <widget class="QWebView" name="webcam">
      <property name="url">
       <url>
        <string>about:blank</string>
@@ -26,10 +26,17 @@
    <item row="0" column="1">
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QSpinBox" name="ValeurVitesse"/>
+      <widget class="QSpinBox" name="ValeurVitesse">
+       <property name="maximum">
+        <number>240</number>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QSlider" name="Slidervitesse">
+       <property name="maximum">
+        <number>240</number>
+       </property>
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
@@ -132,27 +139,9 @@
     </layout>
    </item>
   </layout>
-  <zorder>webView</zorder>
-  <zorder>gauche</zorder>
-  <zorder>droite</zorder>
-  <zorder>bas</zorder>
-  <zorder>haut</zorder>
+  <zorder>webcam</zorder>
   <zorder></zorder>
-  <zorder>bas_2</zorder>
-  <zorder>haut_2</zorder>
-  <zorder>droitecam</zorder>
-  <zorder>gauche_2</zorder>
-  <zorder>verticalSpacer</zorder>
-  <zorder>horizontalSpacer</zorder>
-  <zorder>horizontalSpacer</zorder>
   <zorder></zorder>
-  <zorder>horizontalSpacer</zorder>
-  <zorder>verticalSpacer</zorder>
-  <zorder>ValeurVitesse</zorder>
-  <zorder>Slidervitesse</zorder>
-  <zorder>ValeurVitesse</zorder>
-  <zorder>lcdNumber</zorder>
-  <zorder>lcdNumber_2</zorder>
  </widget>
  <customwidgets>
   <customwidget>
