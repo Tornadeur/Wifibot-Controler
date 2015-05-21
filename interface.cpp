@@ -221,8 +221,10 @@ void interface::keyPressEvent(QKeyEvent *event){
             camera->get(QNetworkRequest(url));
         }
         else if(event->key() == Qt::Key_5){
-            QUrl url("http://" + this->adresse +":8080" + camcenter);
+            QUrl url("http://" + this->adresse +":8080/?action=command&dest=0&plugin=0&id=10094855&group=1&value=1");
             camera->get(QNetworkRequest(url));
+            QUrl url2("http://" + this->adresse +":8080/?action=command&dest=0&plugin=0&id=10094854&group=1&value=1");
+            camera->get(QNetworkRequest(url2));
             qDebug() << "Cam centré !";
         }
 
@@ -230,7 +232,7 @@ void interface::keyPressEvent(QKeyEvent *event){
 
 }
 void interface::keyReleaseEvent(QKeyEvent *event){
-        if(event->key() == Qt::Key_Z || Qt::Key_Up){
+        if(event->key() == Qt::Key_Z){
             this->foreward=false;
         }
         else if(event->key() == Qt::Key_Q){
